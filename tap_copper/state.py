@@ -1,13 +1,12 @@
 import json
+
 import singer
 
 LOGGER = singer.get_logger()
 
 
 def get_last_record_value_for_table(state, table):
-    last_value = state.get('bookmarks', {}) \
-                      .get(table, {}) \
-                      .get('last_record')
+    last_value = state.get("bookmarks", {}).get(table, {}).get("last_record")
 
     if last_value is None:
         return None
@@ -21,14 +20,16 @@ def incorporate(state, table, field, value):
 
     new_state = state.copy()
 
-    if 'bookmarks' not in new_state:
-        new_state['bookmarks'] = {}
+    if "bookmarks" not in new_state:
+        new_state["bookmarks"] = {}
 
-    if(new_state['bookmarks'].get(table, {}).get('last_record') is None or
-       new_state['bookmarks'].get(table, {}).get('last_record') < value):
-        new_state['bookmarks'][table] = {
-            'field': field,
-            'last_record': value,
+    if (
+        new_state["bookmarks"].get(table, {}).get("last_record") is None
+        or new_state["bookmarks"].get(table, {}).get("last_record") < value
+    ):
+        new_state["bookmarks"][table] = {
+            "field": field,
+            "last_record": value,
         }
 
     return new_state
@@ -38,7 +39,7 @@ def save_state(state):
     if not state:
         return
 
-    LOGGER.info('Updating state.')
+    LOGGER.info("Updating state.")
 
     singer.write_state(state)
 

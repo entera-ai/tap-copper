@@ -5,14 +5,14 @@ from tap_copper.streams.base import BaseStream
 LOGGER = singer.get_logger()
 
 
-class CustomFieldsStream(BaseStream):
+class ContactTypesStream(BaseStream):
     API_METHOD = "GET"
-    TABLE = "custom_fields"
+    TABLE = "contact_types"
     KEY_PROPERTIES = ["id"]
 
     @property
     def path(self):
-        return "/custom_field_definitions"
+        return "/contact_types"
 
     def sync_data(self):
         table = self.TABLE
