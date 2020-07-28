@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import singer
-
 import tap_framework
 
 from tap_copper.client import CopperClient
@@ -16,9 +15,7 @@ class CopperRunner(tap_framework.Runner):
 
 @singer.utils.handle_top_exception(LOGGER)
 def main():
-    args = singer.utils.parse_args(required_config_keys=[
-        'token',
-        'email'])
+    args = singer.utils.parse_args(required_config_keys=["token", "email"])
     client = CopperClient(args.config)
     runner = CopperRunner(args, client, AVAILABLE_STREAMS)
 
@@ -28,5 +25,5 @@ def main():
         runner.do_sync()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

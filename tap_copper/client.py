@@ -18,18 +18,18 @@ class CopperClient:
         response = requests.request(
             method,
             url,
-
             headers={
-                'Content-Type': 'application/json',
-                'X-PW-AccessToken': self.config['token'],
-                'X-PW-Application': 'developer_api',
-                'X-PW-UserEmail': self.config['email']
+                "Content-Type": "application/json",
+                "X-PW-AccessToken": self.config["token"],
+                "X-PW-Application": "developer_api",
+                "X-PW-UserEmail": self.config["email"],
             },
             params=params,
-            json=body)
+            json=body,
+        )
 
         if response.status_code != 200:
-            LOGGER.info('status={}'.format(response.status_code))
+            LOGGER.info("status={}".format(response.status_code))
             raise RuntimeError(response.text)
 
         return response.json()
