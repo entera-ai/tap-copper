@@ -1,0 +1,38 @@
+{
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "id": {
+        "type": [
+          "integer"
+        ]
+      },
+      "category": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "is_disabled": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      "count_as_interaction": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      }
+    }
+  }
+  
