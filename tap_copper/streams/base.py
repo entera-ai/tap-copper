@@ -78,8 +78,10 @@ class BaseStream(base):
             save_state(self.state)
 
     def get_stream_data(self, response):
-
         transformed = []
+        if isinstance(response, dict):
+            ## flattens dict to list representation
+            response = [record for records in response.values() for record in records]
         for record in response:
             ## removes fields with missing/wrong data type
             record = self.transform_record(record)
