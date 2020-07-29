@@ -1,0 +1,36 @@
+{
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "id": {
+        "type": [
+          "integer"
+        ]
+      },
+      "name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "stages": {
+        "type": [
+          "null",
+          "array"
+        ],
+        "items": {
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "id": { "type": ["null", "string"] },
+              "name": { "type": ["null", "string"] },
+              "win_probability": { "type": ["null", "number"] }
+            }
+          }
+      }
+    }
+  }
+  
