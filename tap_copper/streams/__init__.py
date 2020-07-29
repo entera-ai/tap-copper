@@ -5,6 +5,7 @@ from tap_copper.streams.custom_fields import CustomFieldsStream
 from tap_copper.streams.customer_sources import CustomerSourcesStream
 from tap_copper.streams.leads import LeadsStream
 from tap_copper.streams.lead_statuses import LeadStatusesStream
+from tap_copper.streams.loss_reasons import LossReasonsStream
 from tap_copper.streams.opportunities import OpportunitiesStream
 from tap_copper.streams.people import PeopleStream
 from tap_copper.streams.pipelines import PipelinesStream
@@ -18,6 +19,7 @@ AVAILABLE_STREAMS = [
     PipelinesStream,
     LeadsStream,
     LeadStatusesStream,
+    LossReasonsStream,
     CompaniesStream,
     OpportunitiesStream,
     ProjectsStream,
@@ -34,6 +36,7 @@ __all__ = [
     "PipelinesStream",
     "LeadsStream",
     "LeadStatusesStream",
+    "LossReasonsStream",
     "CompaniesStream",
     "OpportunitiesStream",
     "ProjectsStream",
