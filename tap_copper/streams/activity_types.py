@@ -14,6 +14,15 @@ class ActivityTypesStream(BaseStream):
     def path(self):
         return "/activity_types"
 
+    def get_stream_data(self, response):
+        transformed = []
+        for records in response.values():
+            for record in records:
+                ## removes fields with missing/wrong data type
+                record = self.transform_record(record)
+                transformed.append(record)
+        return transformed
+
     def sync_data(self):
         table = self.TABLE
 
