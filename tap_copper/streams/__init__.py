@@ -1,4 +1,5 @@
 from tap_copper.streams.activities import ActivitiesStream
+from tap_copper.streams.activity_types import ActivityTypesStream
 from tap_copper.streams.companies import CompaniesStream
 from tap_copper.streams.contact_types import ContactTypesStream
 from tap_copper.streams.custom_fields import CustomFieldsStream
@@ -18,6 +19,7 @@ AVAILABLE_STREAMS = [
     ProjectsStream,
     TasksStream,
     ActivitiesStream,
+    ActivityTypesStream,
     CustomFieldsStream,
     ContactTypesStream,
 ]
@@ -31,6 +33,7 @@ __all__ = [
     "ProjectsStream",
     "TasksStream",
     "ActivitiesStream",
+    "ActivityTypesStream",
     "CustomFieldsStream",
     "ContactTypesStream",
 ]
