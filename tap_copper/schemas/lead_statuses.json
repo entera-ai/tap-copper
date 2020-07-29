@@ -1,0 +1,32 @@
+{
+    "type": [
+      "null",
+      "object"
+    ],
+    "properties": {
+      "id": {
+        "type": [
+          "integer"
+        ]
+      },
+      "name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "order": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "is_default": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      }
+    }
+  }
+  
