@@ -1,0 +1,19 @@
+{
+    "type": [
+		"null",
+		"object"
+    ],
+    "properties": {
+		"id": {
+			"type": [
+				"integer"
+			]
+		},
+		"name": {
+			"type": [
+				"null",
+				"string"
+			]
+		}
+    }
+}  
