@@ -120,12 +120,14 @@
     },
     "converted_unit": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "converted_value": {
       "type": [
-        "null"
+        "null",
+        "integer"
       ]
     },
     "win_probability": {

@@ -18,7 +18,8 @@
     },
     "prefix": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "first_name": {
@@ -41,7 +42,8 @@
     },
     "suffix": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "address": {
@@ -134,22 +136,26 @@
     },
     "monetary_unit": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "monetary_value": {
       "type": [
-        "null"
+        "null",
+        "integer"
       ]
     },
     "converted_unit": {
       "type": [
-        "null"
+        "null",
+        "string"
       ]
     },
     "converted_value": {
       "type": [
-        "null"
+        "null",
+        "integer"
       ]
     },
     "socials": {
