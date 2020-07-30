@@ -186,16 +186,8 @@
           "value": {
             "type": [
               "null",
-              "integer",
-              "string",
-              "array"
-            ],
-            "items": {
-              "type": [
-                "null",
-                "integer"
-              ]
-            }
+              "string"
+            ]
           }
         }
       }
