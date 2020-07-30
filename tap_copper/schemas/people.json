@@ -303,13 +303,13 @@
           "object"
         ],
         "properties": {
-          "url": {
+          "custom_field_definition_id": {
             "type": [
               "null",
-              "string"
+              "integer"
             ]
           },
-          "category": {
+          "value": {
             "type": [
               "null",
               "string"
