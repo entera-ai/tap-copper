@@ -303,6 +303,24 @@
         "null",
         "integer"
       ]
+    },
+    "converted_opportunity_id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "converted_contact_id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "converted_at": {
+      "type": [
+        "null",
+        "integer"
+      ]
     }
   }
 }

@@ -64,6 +64,12 @@
           }
         }
       }
+    },
+    "currency": {
+      "type": [
+        "null",
+        "string"
+      ]
     }
   }
 }
