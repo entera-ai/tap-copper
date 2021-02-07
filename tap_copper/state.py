@@ -18,6 +18,9 @@ def incorporate(state, table, field, value):
     if value is None:
         return state
 
+    if state.get('value'):
+        state = state.get('value')
+
     new_state = state.copy()
 
     if "bookmarks" not in new_state:
@@ -50,7 +53,7 @@ def load_state(filename):
 
     try:
         with open(filename) as handle:
-            return json.load(handle)
+            return json.load(handle).get('value')
     except:
         LOGGER.fatal("Failed to decode state file. Is it valid json?")
         raise RuntimeError

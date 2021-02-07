@@ -52,4 +52,29 @@ Step 4 generates a a file called `catalog.json` that specifies all the available
 tap-copper -c config.json --catalog catalog.json
 ```
 
+### Resuming from a state file
+
+```bash
+tap-copper -c config.json --catalog catalog.json --state state.json
+```
+
+### Piping to Stitch
+
+Create a stitch.config.json file:
+```
+{
+  "client_id" : <your client_id int>,
+  "token" : "<your token>",
+  "small_batch_url": "https://<region>.stitchdata.com/v2/import/batch",
+  "big_batch_url": "https://<region>.stitchdata.com/v2/import/batch",
+  "batch_size_preferences": {}
+}
+```
+Note that [region](https://www.stitchdata.com/docs/account-security/supported-data-pipeline-regions) is either `api.eu-central-1` or `us-east-1`.
+
+Then run:
+```bash
+tap-copper -c config.json --catalog catalog.json | target-stitch --config stitch.config.json
+```
+
 Copyright &copy; 2019 Stitch
